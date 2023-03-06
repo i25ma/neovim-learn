@@ -1,1 +1,3 @@
-require('basic')
+require("basic")
+require("keybindings")
+require("plugins")
