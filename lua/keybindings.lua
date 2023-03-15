@@ -6,7 +6,7 @@ local map = vim.api.nvim_set_keymap
 local opt = {noremap = true, silent = true }
 
 -- 取消 s 默认功能
-map("n", "s", "", opt)
+-- map("n", "s", "", opt)
 -- windows 分屏快捷键
 map("n", "sv", ":vsp<CR>", opt)
 map("n", "sh", ":sp<CR>", opt)
@@ -195,10 +195,7 @@ pluginKeys.cmp = function(cmp)
       return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
     end
   
-    return {
-  
-     ...
-  
+    return {  
       -- 自定义代码段跳转到下一个参数
       ["<C-l>"] = cmp.mapping(function(_)
         if vim.fn["vsnip#available"](1) == 1 then
